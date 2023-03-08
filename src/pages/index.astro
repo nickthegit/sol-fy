@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
+import { Image, Picture } from "@astrojs/image/components";
+import logo from "../images/sol-ify-logo.jpg";
+
+console.log(logo);
+---
+
+<Layout title="Sol-ify">
+  <main>
+    <Image
+      src={import("../images/sol-ify-logo.jpg")}
+      alt=""
+      format="webp"
+      width="476"
+      height="186"
+      loading="lazy"
+      aspectRatio="476:186"
+      fit="contain"
+    />
+    <h1>Welcome to Sol-ify!</h1>
+    <h2>🚧 This site is currently under construction 🚧</h2>
+  </main>
+</Layout>
+
+<style lang="scss">
+  main {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 20px;
+  }
+  img {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+  }
+  h1 {
+    font-size: 4vmax;
+  }
+  h2 {
+    font-size: 2vmax;
+  }
+</style>
