@@ -1,8 +1,27 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import {
+  OnePageHero,
+  OnePageIntro,
+  OnePageServices,
+  OnePageGallery,
+  OnePageBenefits,
+  OnePageFooterCTA,
+} from "@/components/sections";
 
 export default function Home() {
-  return <main>Hi</main>;
+  return (
+    <main className="w-full space-y-20 font-sans lg:space-y-28">
+      {/* hero */}
+      <OnePageHero />
+      {/* intro */}
+      <OnePageIntro />
+      {/* services */}
+      <OnePageServices />
+      {/* gallery */}
+      <OnePageGallery />
+      {/* benefits */}
+      <OnePageBenefits />
+      {/* footer cta */}
+      <OnePageFooterCTA />
+    </main>
+  );
 }
