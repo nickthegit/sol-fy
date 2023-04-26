@@ -19,10 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${comfortaa.variable} font-sans`}>
       <body>
-        <header className="w-full absolute top-0 left-0 z-50 ">
-          <div className="wrapper flex justify-between items-center p-9">
+        <header className="absolute top-0 left-0 z-50 w-full ">
+          <div className="flex items-center justify-between wrapper p-9">
             <section>Brand</section>
-            <section className="flex items-center text-background gap-6">
+            <section className="flex items-center gap-6 text-background">
               <a
                 href="http://"
                 target="_blank"
@@ -50,7 +50,7 @@ export default function RootLayout({
               </a>
               <a
                 href="mailto:"
-                className="border-2 border-solid px-5 py-2 border-yellow rounded-full text-btn flex items-center hover:bg-yellow"
+                className="flex items-center px-5 py-2 border-2 border-solid rounded-full border-yellow text-btn hover:bg-yellow"
               >
                 Get in touch
               </a>
@@ -58,6 +58,14 @@ export default function RootLayout({
           </div>
         </header>
         {children}
+        <footer className="w-full text-white bg-black">
+          <div className="py-5 wrapper">
+            <p className="text-xs">
+              © Sol-ify 2023 - Some text here. Privacy Policy, Terms and
+              conditions
+            </p>
+          </div>
+        </footer>
       </body>
     </html>
   );
