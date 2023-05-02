@@ -1,7 +1,6 @@
 import blockContent from './blockContent'
-import category from './category'
-import post from './post'
-import author from './author'
 import onePager from './onePager'
+import legalDoc from './legalDoc'
+import settings from './settings'
 
-export const schemaTypes = [post, author, category, blockContent, onePager]
+export const schemaTypes = [blockContent, onePager, legalDoc, settings]
