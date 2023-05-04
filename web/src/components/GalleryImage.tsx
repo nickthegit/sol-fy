@@ -1,6 +1,6 @@
 import urlBuilder from "@/utils/urlBuilder";
 
-export default function FullWidthImage({
+export default function GalleryImage({
   className,
   imgObj,
 }: {
@@ -8,7 +8,9 @@ export default function FullWidthImage({
   imgObj?: any;
 }) {
   return (
-    <picture className={`relative block w-full h-full ${className}`}>
+    <picture
+      className={`relative block aspect-square md:aspect-video ${className}`}
+    >
       <source
         srcSet={`${urlBuilder(imgObj.asset)
           .auto("format")
@@ -19,8 +21,8 @@ export default function FullWidthImage({
           .crop("focalpoint")
           .fit("crop")
           .dpr(2)
-          .width(600)
-          .height(1067)
+          .width(480)
+          .height(480)
           .url()} 2x, ${urlBuilder(imgObj.asset)
           .auto("format")
           .focalPoint(
@@ -29,10 +31,10 @@ export default function FullWidthImage({
           )
           .crop("focalpoint")
           .fit("crop")
-          .width(600)
-          .height(1067)
+          .width(480)
+          .height(480)
           .url()}`}
-        media="(max-width: 600px)"
+        media="(max-width: 480px)"
       />
       <source
         srcSet={`${urlBuilder(imgObj.asset)
@@ -69,8 +71,8 @@ export default function FullWidthImage({
           .crop("focalpoint")
           .fit("crop")
           .dpr(2)
-          .width(1920)
-          .height(1080)
+          .width(1240)
+          .height(698)
           .url()} 2x, ${urlBuilder(imgObj.asset)
           .auto("format")
           .focalPoint(
@@ -79,8 +81,8 @@ export default function FullWidthImage({
           )
           .crop("focalpoint")
           .fit("crop")
-          .width(1920)
-          .height(1080)
+          .width(1240)
+          .height(698)
           .url()}`}
         media="(min-width: 1001px)"
       />
@@ -94,8 +96,8 @@ export default function FullWidthImage({
           .crop("focalpoint")
           .fit("crop")
           .dpr(2)
-          .width(1920)
-          .height(1080)
+          .width(1240)
+          .height(698)
           .url()} 2x`}
         src={`${urlBuilder(imgObj.asset)
           .auto("format")
@@ -105,12 +107,10 @@ export default function FullWidthImage({
           )
           .crop("focalpoint")
           .fit("crop")
-          .width(1920)
-          .height(1080)
+          .width(1240)
+          .height(698)
           .url()}`}
-        alt={
-          imgObj?.heroImageAlt ? imgObj.heroImageAlt : "image for hero section"
-        }
+        alt="solify gallery image"
         className="relative object-cover w-full h-full"
       />
     </picture>

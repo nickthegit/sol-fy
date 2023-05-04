@@ -61,18 +61,9 @@ export default defineType({
       validation: (Rule: {required: () => any}) => Rule.required(),
     }),
     defineField({
-      name: 'introTitle',
-      title: 'Intro Title',
-      type: 'string',
-      // max 90 characters
-      validation: (Rule: {max: (arg0: number) => any}) => Rule.max(90),
-    }),
-    defineField({
       name: 'introText',
       title: 'Intro Text',
-      type: 'text',
-      // max 340 characters
-      validation: (Rule: {max: (arg0: number) => any}) => Rule.max(340),
+      type: 'blockContentIntro',
     }),
     // gallery
     defineField({

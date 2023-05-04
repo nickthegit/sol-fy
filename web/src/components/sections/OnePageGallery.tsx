@@ -1,9 +1,11 @@
 "use client";
 
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
-export function OnePageGallery() {
+import GalleryImage from "@/components/GalleryImage";
+
+export function OnePageGallery({ images }: { images: any[] }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -12,23 +14,16 @@ export function OnePageGallery() {
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
+
   return (
     <section className="wrapper">
       <div className="embla" ref={emblaRef}>
         <div className="embla__container">
-          <div className="w-full embla__slide">
-            <img
-              src="https://via.placeholder.com/1920x1080/f02d2d/ffffff"
-              alt="hero"
-            />
-          </div>
-          <div className="w-full embla__slide">
-            <img
-              src="https://via.placeholder.com/1920x1080/2d2df0/ffffff"
-              alt="hero"
-            />
-          </div>
-          <div className="w-full embla__slide bg-yellow">Slide 3</div>
+          {images?.map((image, index) => (
+            <div className="w-full embla__slide" key={image._key}>
+              <GalleryImage imgObj={image} />
+            </div>
+          ))}
         </div>
       </div>
       <div className="relative flex justify-end gap-10 mt-6">

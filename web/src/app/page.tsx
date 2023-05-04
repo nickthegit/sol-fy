@@ -18,7 +18,9 @@ async function getData() {
 export default async function Home() {
   const data = await getData();
 
-  console.log(data);
+  // setTimeout(() => {
+  //   console.log(data.footerCta);
+  // }, 2000);
 
   return (
     <main className="w-full space-y-20 font-sans lg:space-y-28">
@@ -29,15 +31,22 @@ export default async function Home() {
         heroImage={data?.hero?.heroImage}
       />
       {/* intro */}
-      <OnePageIntro />
+      <OnePageIntro
+        introText={data?.intro?.introText}
+        introImage={data?.intro?.introImage}
+        email={data?.intro?.introCtaLink}
+      />
       {/* services */}
       <OnePageServices />
       {/* gallery */}
-      <OnePageGallery />
+      <OnePageGallery images={data?.gallery} />
       {/* benefits */}
-      <OnePageBenefits />
+      <OnePageBenefits benefits={data?.benefits} />
       {/* footer cta */}
-      <OnePageFooterCTA />
+      <OnePageFooterCTA
+        statement={data?.footerCta?.footerStatement}
+        logos={data?.footerCta?.logos}
+      />
     </main>
   );
 }

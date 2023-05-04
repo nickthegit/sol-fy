@@ -188,3 +188,17 @@ meter {
   position: absolute;
   clip-path: polygon(0 0, 50% 51%, 100% 100%, 0% 100%);
 }
+
+.proseSol h3 {
+  @apply text-heading-3;
+}
+.proseSol h3 strong {
+  @apply text-primary;
+}
+
+.statement h3 {
+  @apply text-heading-3;
+}
+.statement p {
+  @apply text-cta;
+}
