@@ -21,6 +21,7 @@ export const meta = `
 export const header = `
 *[_type == "settings"][0] {
   siteLogo,
+  siteTitle,
   email,
   instagramLink  
 }

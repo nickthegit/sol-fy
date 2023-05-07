@@ -5,6 +5,8 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 
+import urlBuilder from "@/utils/urlBuilder";
+
 export default function Header({
   siteLogo,
   siteTitle,
@@ -29,7 +31,16 @@ export default function Header({
         <section>
           <Link href="/">
             {siteLogo ? (
-              <Image src={siteLogo} alt={siteTitle} width={100} height={100} />
+              <Image
+                src={urlBuilder(siteLogo.asset)
+                  .width(200)
+                  .height(78)
+                  .auto("format")
+                  .url()}
+                alt={siteTitle}
+                width={100}
+                height={39}
+              />
             ) : (
               <h1
                 className={`text-2xl font-bold ${
