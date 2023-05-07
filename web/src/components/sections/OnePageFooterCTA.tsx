@@ -26,6 +26,7 @@ export function OnePageFooterCTA({
                 src={urlBuilder(logo.asset).url()}
                 alt=""
                 fill={true}
+                sizes="(max-width: 480px) 50vw, (max-width: 768px) 20vw, 15vw"
                 className="absolute inset-0 object-contain w-full h-full"
               />
             </div>

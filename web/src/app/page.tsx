@@ -18,10 +18,6 @@ async function getData() {
 export default async function Home() {
   const data = await getData();
 
-  // setTimeout(() => {
-  //   console.log(data.footerCta);
-  // }, 2000);
-
   return (
     <main className="w-full space-y-20 font-sans lg:space-y-28">
       {/* hero */}

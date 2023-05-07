@@ -1,4 +1,4 @@
-export const setiings = `
+export const settings = `
 *[_type == "settings"][0] {
   siteTitle,
   siteDescription,
@@ -54,4 +54,8 @@ export const onePager = `
     logos
   }
 }
+`;
+
+export const companyPage = (slug: string) => `
+  *[_type == "legalDoc" && slug.current == "${slug}"][0]
 `;
