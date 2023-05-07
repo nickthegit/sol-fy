@@ -33,6 +33,7 @@ async function getMetadata() {
 export async function generateMetadata(): Promise<Metadata> {
   const md = await getMetadata();
   return {
+    metadataBase: new URL("https://sol-ify.co.uk"),
     title: md.siteTitle,
     description: md.siteDescription,
     openGraph: {
