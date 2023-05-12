@@ -46,6 +46,7 @@ export default async function Home() {
         <OnePageFooterCTA
           statement={data?.footerCta?.footerStatement}
           logos={data?.footerCta?.logos}
+          affiliateLogos={data?.footerCta?.affiliateLogos}
         />
       </div>
     </main>
