@@ -119,6 +119,46 @@ export default defineType({
       // required
       validation: (Rule: {required: () => any}) => Rule.required(),
     }),
+    // testimonials
+    defineField({
+      name: 'testimonials',
+      title: 'Testimonials',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'testimonial',
+              title: 'Testimonial',
+              type: 'array',
+              of: [
+                {
+                  type: 'block',
+                  styles: [{title: 'Normal', value: 'normal'}],
+                  lists: [],
+                },
+              ],
+              options: {
+                layout: 'tags',
+              },
+              // required
+              validation: (Rule: {required: () => any}) => Rule.required(),
+            },
+            {
+              name: 'author',
+              title: 'Author',
+              type: 'string',
+              // max 40 characters
+              validation: (Rule: {max: (arg0: number) => any}) => Rule.max(40),
+            },
+          ],
+        },
+      ],
+      options: {
+        layout: 'tags',
+      },
+    }),
     // footer statement
     defineField({
       name: 'footerStatement',

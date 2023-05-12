@@ -19,7 +19,6 @@ export default function Header({
   instagramLink: string;
 }) {
   const pathname = usePathname();
-  console.log("pathname", pathname);
 
   const isHome = useMemo(() => {
     return pathname === "/";

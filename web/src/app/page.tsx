@@ -7,6 +7,7 @@ import {
   OnePageServices,
   OnePageGallery,
   OnePageBenefits,
+  OnePageTestimonials,
   OnePageFooterCTA,
 } from "@/components/sections";
 
@@ -38,11 +39,15 @@ export default async function Home() {
       <OnePageGallery images={data?.gallery} />
       {/* benefits */}
       <OnePageBenefits benefits={data?.benefits} />
-      {/* footer cta */}
-      <OnePageFooterCTA
-        statement={data?.footerCta?.footerStatement}
-        logos={data?.footerCta?.logos}
-      />
+      <div>
+        {/* testimonials */}
+        <OnePageTestimonials testimonials={data?.testimonials} />
+        {/* footer cta */}
+        <OnePageFooterCTA
+          statement={data?.footerCta?.footerStatement}
+          logos={data?.footerCta?.logos}
+        />
+      </div>
     </main>
   );
 }

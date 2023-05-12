@@ -20,14 +20,14 @@ export function OnePageFooterCTA({
           {logos.map((logo) => (
             <div
               key={logo._key}
-              className="col-span-6 md:col-span-3 col-start-auto relative h-0 pb-[56.25%]"
+              className="col-span-6 md:col-span-3 col-start-auto relative h-0 pb-[56.25%] bg-white"
             >
               <Image
                 src={urlBuilder(logo.asset).url()}
                 alt=""
                 fill={true}
                 sizes="(max-width: 480px) 50vw, (max-width: 768px) 20vw, 15vw"
-                className="absolute inset-0 object-contain w-full h-full"
+                className="relative object-contain !w-[75%] !-translate-x-1/2 !left-1/2"
               />
             </div>
           ))}

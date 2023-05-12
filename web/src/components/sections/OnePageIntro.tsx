@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import urlBuilder from "@/utils/urlBuilder";
 
 import { PortableText } from "@portabletext/react";
@@ -40,7 +44,7 @@ export function OnePageIntro({
               .url()}`}
             media="(min-width: 480px)"
           />
-          <img
+          <motion.img
             src={`${urlBuilder(introImage.asset)
               .auto("format")
               .focalPoint(

@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 import urlBuilder from "@/utils/urlBuilder";
 
 export default function FullWidthImage({
@@ -8,7 +11,11 @@ export default function FullWidthImage({
   imgObj?: any;
 }) {
   return (
-    <picture className={`relative block w-full h-full ${className}`}>
+    <motion.picture
+      initial={{ height: "0%" }}
+      animate={{ height: ["0%", "100%"], opacity: [0, 1] }}
+      className={`relative block w-full h-full ${className}`}
+    >
       <source
         srcSet={`${urlBuilder(imgObj.asset)
           .auto("format")
@@ -113,6 +120,6 @@ export default function FullWidthImage({
         }
         className="relative object-cover w-full h-full"
       />
-    </picture>
+    </motion.picture>
   );
 }

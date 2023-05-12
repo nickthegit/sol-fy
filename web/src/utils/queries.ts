@@ -49,6 +49,7 @@ export const onePager = `
   },
   "gallery": *[_type == "onePager"][0].galleryImages,
   "benefits": *[_type == "onePager"][0].benefits,
+  "testimonials": *[_type == "onePager"][0].testimonials,
   "footerCta": *[_type == "onePager"][0] {
     footerStatement,
     affiliateLogos,

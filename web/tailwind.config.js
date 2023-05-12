@@ -9,21 +9,6 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      black: colors.black,
-      white: colors.white,
-      gray: colors.gray,
-      emerald: colors.emerald,
-      indigo: colors.indigo,
-      yellow: "#FEC64F",
-      //
-      primary: "#FEC64F",
-      foreground: "#000000",
-      background: "#ffffff",
-    },
-
     extend: {
       fontFamily: {
         sans: ["var(--font-comfortaa)", ...fontFamily.sans],
@@ -31,6 +16,20 @@ module.exports = {
       aspectRatio: {
         "4/3": "4 / 3",
         "3/4": "3 / 4",
+      },
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        black: colors.black,
+        white: colors.white,
+        gray: colors.gray,
+        emerald: colors.emerald,
+        indigo: colors.indigo,
+        yellow: "#FEC64F",
+        //
+        primary: "#FEC64F",
+        foreground: "#000000",
+        background: "#ffffff",
       },
     },
   },

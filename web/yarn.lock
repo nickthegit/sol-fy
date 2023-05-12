@@ -9,6 +9,18 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
+"@emotion/is-prop-valid@^0.8.2":
+  version "0.8.8"
+  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
+  integrity sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==
+  dependencies:
+    "@emotion/memoize" "0.7.4"
+
+"@emotion/memoize@0.7.4":
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.7.4.tgz#19bf0f5af19149111c40d98bb0cf82119f5d9eeb"
+  integrity sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==
+
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz#a23514e8fb9af1269d5f7788aa556798d61c6b59"
@@ -1065,6 +1077,16 @@ electron-to-chromium@^1.4.284:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.358.tgz#301afde62c1bbe36aeec3155b11f7db1c5b01c78"
   integrity sha512-dbqpWy662dGVwq27q8i6+t5FPcQiFPs/VExXJ+/T9Xp9KUV0b5bvG+B/i07FNNr7PgcN3GhZQCZoYJ9EUfnIOg==
 
+embla-carousel-auto-height@^8.0.0-rc03:
+  version "8.0.0-rc03"
+  resolved "https://registry.yarnpkg.com/embla-carousel-auto-height/-/embla-carousel-auto-height-8.0.0-rc03.tgz#152b1c7ad0cacf7a12256d76f5e1c1b5661d29a4"
+  integrity sha512-eXbQWorm5g6WgLnbMVSkmcO3RDEf1sNkq/so2aSs1XAw/WP0Tjso15s0Vgdcft27rsH6pLzDXD3uev2339h+0Q==
+
+embla-carousel-autoplay@^8.0.0-rc03:
+  version "8.0.0-rc03"
+  resolved "https://registry.yarnpkg.com/embla-carousel-autoplay/-/embla-carousel-autoplay-8.0.0-rc03.tgz#1e5d8a2e21791f7f9989818a6c1f2d1545b49cc1"
+  integrity sha512-AEMoMAsOG5mpL2TidI6CfbfS9MSF0oQFoyy69s77HZVkTs2jmkP4TFxjsplFX0URjYsvsTL0jc67MMacrpP2jw==
+
 embla-carousel-react@^7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/embla-carousel-react/-/embla-carousel-react-7.1.0.tgz#e716f4df7fd31f7ca3e59a3e011158167bc3c468"
@@ -1522,6 +1544,15 @@ fraction.js@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.2.0.tgz#448e5109a313a3527f5a3ab2119ec4cf0e0e2950"
   integrity sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==
+
+framer-motion@^10.12.9:
+  version "10.12.9"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-10.12.9.tgz#113bfdf34d32e06fc8e8093033829bc5ee1ea03e"
+  integrity sha512-diLij2xjOn8RS1xz66wNDTa6nezR3bRRBB9J0r1a5xeJjcSdJpOkk2U7pTzhg1v54bzZ7HBLJ4gKo8aAQM0U3w==
+  dependencies:
+    tslib "^2.4.0"
+  optionalDependencies:
+    "@emotion/is-prop-valid" "^0.8.2"
 
 from2@^2.3.0:
   version "2.3.0"
