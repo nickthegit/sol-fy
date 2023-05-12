@@ -113,6 +113,11 @@ meter {
   all: revert;
 }
 
+::selection {
+  background: #fec64f;
+  color: #000;
+}
+
 .grid-12 {
   @apply grid grid-cols-12 gap-5;
 }
